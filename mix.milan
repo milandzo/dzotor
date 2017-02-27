@@ -1,1 +1,2 @@
-
+defmodule dzosoft.mixfile do
+use Mix.Project
