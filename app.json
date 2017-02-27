@@ -6,12 +6,21 @@
   "scripts":{
     "postdeploy":"POOL_SIZE=2 mix etno.migrate",
   },
-  "addons":{
+  "addons":[
   "heroku-postgresql:hobby-dev",
-},
+],
  "buildpacks": [
       {
         "url": "https://github.com/HashNuke/heroku-buildpack-elixir"
       }
     ],
+	 "env": {
+      "POOL_SIZE": {
+        "description": "The number of workers to run.",
+        "value": "18"
+      },
+      "SECRET_KEY_BASE": {
+        "description": "A newly-generated secret key.",
+        "generator": "secret"
+      }
 }
