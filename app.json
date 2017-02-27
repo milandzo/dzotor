@@ -7,6 +7,11 @@
     "postdeploy":"POOL_SIZE=2 mix etno.migrate",
   },
   "addons":{
-  "heroku-postgresql:hobby-dev"
-}
+  "heroku-postgresql:hobby-dev",
+},
+ "buildpacks": [
+      {
+        "url": "https://github.com/HashNuke/heroku-buildpack-elixir"
+      }
+    ],
 }
