@@ -2,4 +2,11 @@
 "name":"dzotorent",
 "description":"najpopularnija web aplikacija",
 "website":"https://github.com/milandzo/",
+ "success_url":"/sumary",
+  "scripts":{
+    "postdeploy":"POOL_SIZE=2 mix etno.migrate",
+  },
+  "addons":{
+  "heroku-postgresql:hobby-dev"
+}
 }
