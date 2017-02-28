@@ -15,7 +15,7 @@ elixirc_paths: elixirc_paths(Mix.env),
   #
   # Type `mix help compile.app` for more information.
   def application do
-    [mod: {Magnetissimo, []},
+    [mod: {dzosoft, []},
      applications: [:dzosoft, :dzosoft_pubsub, :dzosoft_html, :cowboy, :logger, :gettext,
                     :dzosoft_etno, :postgrex, :httpoison, :sizeable]]
   end
