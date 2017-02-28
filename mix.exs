@@ -40,6 +40,19 @@ elixirc_paths: elixirc_paths(Mix.env),
      {:distillery, "~> 1.0"},
      {:scrivener_ecto, "~> 1.0"},
      {:scrivener_html, "~> 1.1"},
-     {:sizeable, "~> 0.1.5"}]
+     {:sizeable, "~> 0.1
+	 end
+	 
+  # Aliases are shortcuts or tasks specific to the current project.
+  # For example, to create, migrate and run the seeds file at once:
+  #
+  #     $ mix ecto.setup
+  #
+  # See the documentation for `Mix` for more info on aliases.
+  defp aliases do
+    ["etno.setup": ["etno.create", "etno.migrate", "run priv/repo/seeds.exs"],
+     "etno.reset": ["etno.drop", "etno.setup"],
+     "test": ["etno.create --quiet", "etno.migrate", "test"]]
   end
+end
 
