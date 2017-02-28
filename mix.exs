@@ -19,4 +19,8 @@ elixirc_paths: elixirc_paths(Mix.env),
      applications: [:dzosoft, :dzosoft_pubsub, :dzosoft_html, :cowboy, :logger, :gettext,
                     :dzosoft_etno, :postgrex, :httpoison, :sizeable]]
   end
+  # Specifies which paths to compile per environment.
+  defp elixirc_paths(:test), do: ["lib", "web", "test/support"]
+  defp elixirc_paths(_),     do: ["lib", "web"]
+
 
